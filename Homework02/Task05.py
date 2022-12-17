@@ -17,5 +17,4 @@ for j in range(0,500):
         change = list[i]
         list[i] = list[index]
         list[index] = change
-
 print(list)
