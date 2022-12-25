@@ -12,21 +12,14 @@ res = ""
 for i in range(k,-1, -1):
     f = ""
     a = random.randrange(0,100)
-    if a > 1:
-        f = str(a)
-        if i > 0:
-            f += '*'
     if a > 0:
-        if i > 1:
-            f += 'x^' + str(i) + ' + '
-        elif i == 1:
-            f += 'x + '
+        f = str(a) + '*x^' + str(i) + ' + '
     res += f
 if len(res) > 0:
     res += ' = 0'
 else:
     print('No arguments')
-res = res.replace('+  ', '')
-res = res.replace('+  +', '+')
+
+res = res.replace(' 1*x', ' x').replace('x^1', 'x').replace('*x^0', '').replace('+  ', '').replace('+  +', '+')
 file.write(res)
 file.close()
