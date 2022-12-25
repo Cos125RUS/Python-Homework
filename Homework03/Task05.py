@@ -8,8 +8,6 @@ def fi(n):
         return 1
     elif n == 0:
         return 0
-    elif n == -2:
-        return -1
     else:
         if n > 0:
             return fi(n-1) + fi(n-2)

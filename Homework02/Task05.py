@@ -11,8 +11,8 @@ for i in range(1, n+1):
 
 print(list)
 
-for j in range(0,500):
-    for i in range(0,n):
+for j in range(500):
+    for i in range(n):
         index = random.randrange(0, n-1)
         change = list[i]
         list[i] = list[index]
