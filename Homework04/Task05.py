@@ -8,7 +8,6 @@ with open('file2.txt', 'r') as file:
 dic = {}
 for degree in arg:
     q = (degree + ' ').replace('*x^', ' ').replace('x^', '1 ').replace('*x', ' 1').replace('x', '1 1').split()
-    print(q)
     if len(q) == 1:
         q.append('0')
     if q[1] not in dic.keys():
