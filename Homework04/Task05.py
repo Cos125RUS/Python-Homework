@@ -8,21 +8,29 @@ with open('file2.txt', 'r') as file:
 dic = {}
 for degree in arg:
     if degree.count('^'):
-        key = degree[-1:]
+        key = degree.split('^')
+        a = key[0].replace('*','').replace('x','')
+        key = int(key[1])
     elif degree.count('x'):
-        key = '1'
+        key = 1
+        a = degree.replace('*','').split('x')
+        a = a[0]
     else:
-        key = '0'
+        key = 0
+        a = degree
+    if a == '':
+        a = '1'
     if key not in dic.keys():
-        dic[key] = [degree.replace('*x','').replace('^','').replace(key,'')]
+        dic[key] = [a]
     else:
-        dic[key] += [degree.replace('*x','').replace('^','').replace(key,'')]
+        dic[key] += [a]
+dic = dict(sorted(dic.items(), reverse=True))
 formula = ""
 for i in dic.keys():
     sum = 0
     for j in dic[i]:
         sum += int(j)
-    formula += str(sum) + '*x^' + i + ' + '
+    formula += str(sum) + '*x^' + str(i) + ' + '
 formula += ' = 0'
 formula = formula.replace('x^1', 'x').replace('*x^0', '').replace(' 1*', ' ').replace('+  +', '+').replace('+  ', '')
 with open('res.txt', 'w') as file:
