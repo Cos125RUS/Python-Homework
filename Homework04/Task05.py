@@ -7,23 +7,14 @@ with open('file2.txt', 'r') as file:
     arg += file.read().replace(' = 0', '').replace(' ', '').split('+')
 dic = {}
 for degree in arg:
-    if degree.count('^'):
-        key = degree.split('^')
-        a = key[0].replace('*','').replace('x','')
-        key = int(key[1])
-    elif degree.count('x'):
-        key = 1
-        a = degree.replace('*','').split('x')
-        a = a[0]
+    q = (degree + ' ').replace('*x^', ' ').replace('x^', '1 ').replace('*x', ' 1').replace('x', '1 1').split()
+    print(q)
+    if len(q) == 1:
+        q.append('0')
+    if q[1] not in dic.keys():
+        dic[q[1]] = [q[0]]
     else:
-        key = 0
-        a = degree
-    if a == '':
-        a = '1'
-    if key not in dic.keys():
-        dic[key] = [a]
-    else:
-        dic[key] += [a]
+        dic[q[1]] += [q[0]]
 dic = dict(sorted(dic.items(), reverse=True))
 formula = ""
 for i in dic.keys():
