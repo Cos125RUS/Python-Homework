@@ -18,3 +18,21 @@ for i in list:
     s += str(i)
 
 print(s)
+
+a = int(input('введите число для перевода = '))
+b = ''
+while a != 0:
+    b = str(a % 2) + b
+    a = a // 2
+print(b)
+
+num10 = 45
+print(f'Двоичное число через функцию bin: {bin(num10)}')
+
+def toBinary(num):
+    if num == 0:
+        return '0'
+    if num == 1:
+        return '1'
+    else:
+        return toBinary(num // 2) + str(num % 2)

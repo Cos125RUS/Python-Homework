@@ -22,3 +22,19 @@ for i in range(-n, n+1):
     numbers.append(fi(i))
 
 print(numbers)
+
+def lst_fibonacci_num():
+    num = int(input('Введите любое натуральное число: '))
+    fib = []
+    a, b = 1, 1
+    for i in range(num):
+        fib.append(a)
+        a, b = b, a + b
+    a, b = 0, 1
+    for j in range(num + 1):
+        fib.insert(0, a)
+        a, b = b, a - b
+    print(f'Список чисел Фибоначчи для {num}: {fib}')
+
+
+lst_fibonacci_num()
