@@ -1,7 +1,6 @@
 # Создайте программу для игры в ""Крестики-нолики"".
 
 def change_field(field, chois, symbol):
-    # chois = list(map(lambda x: x-1, (map(int, (chois.split('.'))))))
     field[chois[0]][chois[1]] = symbol
     flag = 0
 
@@ -35,7 +34,6 @@ def change_field(field, chois, symbol):
     else:
         return 0
 
-
 def check(field):
     if field == '_':
         return True
@@ -57,31 +55,17 @@ while win == 0:
     for i in range(len(field)):
         print(*field[i])
     print()
-    # chois = input(f"Player {move} chois: ")
-    # chois = list(map(lambda x: x - 1, (map(int, (input(f"Player {move} chois: ").split('.'))))))
-    # print(chois)
     while not factorization:
         chois = list(map(lambda x: x - 1, (map(int, (input(f"Player {move} chois: ").split('.'))))))
         factorization = check(field[chois[0]][chois[1]])
     win = change_field(field, chois, player1 if move == 1 else player2)
+    counter += 1
     if counter == 9:
-        print('Draw')
+        win = 3
 
 for i in range(len(field)):
     print(*field[i])
-print(f'\nPlayer {move} WIN!')
-
-
-
-# while True:
-#     print('Для игры с другим человеком нажми 1\nДля игры с ботом - 2')
-#     game = int(input('Твой выбор: '))
-#
-#     while game != 1 and game != 2:
-#         print('\nРусским же языком написано: 1 или 2 нажми. Что сложного-то?')
-#         game = int(input('Как думаешь, сейчас справишься? '))
-#
-#     if game == 1:
-#         pvp()
-#     else:
-#         pvb()
+if win < 3:
+    print(f'\nPlayer {win} WIN!')
+else:
+    print('\nDraw')
