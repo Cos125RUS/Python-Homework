@@ -19,3 +19,38 @@ num = []
 num.append(int(input('N = ')))
 print(f'{num[0]} = ', end = '')
 primeFactors(num)
+
+
+n = int(input("Введите число N: "))
+i = 2
+list = []
+
+while i <= n:
+    if n % i == 0:
+        list.append(i)
+        n //= i
+        i = 2
+    else:
+        i += 1
+print(f"Простые множители введенного числа указаны в списке: {list}")
+
+
+
+def PrimeFactorization(N):
+    i = 2
+    factor = []
+    while N >= i * 2:
+        if N % i == 0:
+            result = PrimeFactorization(N // i)
+            result.append(i)
+            factor += result
+            return sorted(factor)
+        i += 1
+    if len(factor) == 0:
+        factor.append(N)
+    return sorted(factor)
+
+
+N = int(input("Введите число: "))
+
+print(PrimeFactorization(N))

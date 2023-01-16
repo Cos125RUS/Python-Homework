@@ -26,15 +26,27 @@
 # с т уу с
 # т уу т
 # уу у
+#
+# word = input("Введи русское слово без ё: ") + " запретил букву"
+# char = int(1072)
+# while len(word) > 1:
+#     if word[0] == ' ':
+#         word = word.replace(word[0], '', 1)
+#     if word.count(chr(char)) > 0:
+#         print(f"{word} {chr(char)}")
+#         word = word.replace(chr(char),'')
+#     char += 1
 
-word = input("Введи русское слово без ё: ") + " запретил букву"
-char = int(1072)
-while len(word) > 1:
-    if word[0] == ' ':
-        word = word.replace(word[0], '', 1)
-    if word.count(chr(char)) > 0:
-        print(f"{word} {chr(char)}")
-        word = word.replace(chr(char),'')
-    char += 1
+s1 = ' '.join([input(), 'запретил букву'])
 
+unique = []
+
+for i in s1:
+    if(i not in unique and i!=' '):
+        unique.append(i)
+
+
+for i in sorted(unique):
+    print(' '.join([s1,i]))
+    s1 = s1.replace(i, '').strip()
 
