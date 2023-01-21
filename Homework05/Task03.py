@@ -7,24 +7,25 @@ def change_field(field, chois, symbol):
     for i in range(len(field)):
         if field[i].count(symbol) == 3:
             flag = 1
-
-    f = list(zip(field[0], field[1], field[2]))
-    for i in range(len(f)):
-        if f[i].count(symbol) == 3:
-            flag = 1
-
-    diagonal = []
-    diagonal.append(field[0][0])
-    diagonal.append(field[1][1])
-    diagonal.append(field[2][2])
-    if diagonal.count(symbol) == 3:
-        flag = 1
-    diagonal.remove(field[0][0])
-    diagonal.append(field[0][2])
-    diagonal.remove(field[2][2])
-    diagonal.append(field[2][0])
-    if diagonal.count(symbol) == 3:
-        flag = 1
+        else:
+            f = list(zip(field[0], field[1], field[2]))
+            for i in range(len(f)):
+                if f[i].count(symbol) == 3:
+                    flag = 1
+                else:
+                    diagonal = []
+                    diagonal.append(field[0][0])
+                    diagonal.append(field[1][1])
+                    diagonal.append(field[2][2])
+                    if diagonal.count(symbol) == 3:
+                        flag = 1
+                    else:
+                        diagonal.remove(field[0][0])
+                        diagonal.append(field[0][2])
+                        diagonal.remove(field[2][2])
+                        diagonal.append(field[2][0])
+                        if diagonal.count(symbol) == 3:
+                            flag = 1
 
     if flag == 1:
         if symbol == 'X':
