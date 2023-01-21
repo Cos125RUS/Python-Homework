@@ -10,3 +10,9 @@ def find_contact():
 
 def export_contact():
     return m.export()
+
+def menu():
+    m.choice(v.show_nemu())
+
+def show_res(res):
+    v.view_res(res)
