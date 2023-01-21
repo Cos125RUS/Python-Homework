@@ -30,7 +30,7 @@ def bot(k):
     m = 28
     chois = k%(m+1)
     if chois == 0:
-        chois = r.randrange(1, 29)
+        chois = r.randrange(1, 28)
     return chois
 def pvb():
     k = 2021
@@ -46,12 +46,12 @@ def pvb():
             k -= choice
             print(f'Бот забрал {choice} конфет')
     if player == 1:
-        print(f'\nПобедил игрок')
+        print(f'\nКаким-то чудом победил игрок')
     else:
-        print(f'\nПобедил бот')
+        print(f'\nЗакономерно победил бот')
 
 while True:
-    print('Для игры с другим человеком нажми 1\nДля игры с ботом - 2')
+    print('Для игры с другим мешком мяса жми 1\nДля игры с ботом - 2')
     game = int(input('Твой выбор: '))
 
     while game != 1 and game != 2:
