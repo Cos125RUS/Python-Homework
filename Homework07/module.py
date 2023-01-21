@@ -21,7 +21,7 @@ def find(name):
 
 
 # Экспорт контактов в txt
-def export():
+def export_txt():
     with open('contacts.csv', 'r') as data:
         lines = data.read().split('\n')
         txt = ''
@@ -33,3 +33,17 @@ def export():
             book.write(txt)
         return 'Txt-file was creation'
 
+
+# Экспорт контактов в xml
+def export_xml():
+    with open('contacts.csv', 'r') as data:
+        lines = data.read().split('\n')
+        xml = '<xml>\n'
+        for i in lines[0:-1]:
+            member = i.split(';')
+            xml += f'    <name units = "{member[0]} ">{member[1]}</name>\n'
+        xml += '</xml>'
+        with open('contacts_book.xml', 'w') as book:
+            book.truncate()
+            book.write(xml)
+        return 'Xml-file was creation'

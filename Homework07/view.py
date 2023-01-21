@@ -18,6 +18,7 @@ def show_nemu():
     return input('1 - create new contact\n' \
                    '2 - find contact\n' \
                    '3 - export contacts to txt\n' \
+                   '4 - export contacts to xml\n' \
                    '0 - exit\n')
 
 
