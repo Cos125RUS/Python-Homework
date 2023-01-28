@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "surname": Алеексеев,
+        "name": Иван,
+        "patronymic": Иванович,
+        "position": электрик,
+        "salary": 50000
+    },
+    {
+        "id": 2,
+        "surname": Путин,
+        "name": Владимир,
+        "patronymic": Владимирович,
+        "position": президент,
+        "salary": 500000
+    },
+    {
+        "id": 3,
+        "surname": Макаров,
+        "name": Макар,
+        "patronymic": Андреевич,
+        "position": лейтинант,
+        "salary": 20000
+    },
+    {
+        "id": 4,
+        "surname": Петров,
+        "name": Петр,
+        "patronymic": Петрович,
+        "position": аналитик,
+        "salary": 60000
+    },
+    {
+        "id": 5,
+        "surname": Сидоров,
+        "name": Сидор,
+        "patronymic": Сидорович,
+        "position": маляр,
+        "salary": 12000
+    },
+    {
+        "id": 6,
+        "surname": Пушкин,
+        "name": Александр,
+        "patronymic": Сергеевич,
+        "position": поэт,
+        "salary": 100000
+    },
+    {
+        "id": 7,
+        "surname": Сталин,
+        "name": Иосиф,
+        "patronymic": Виссарионович,
+        "position": генсек,
+        "salary": 10000
+    }
+]

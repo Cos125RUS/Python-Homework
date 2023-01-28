@@ -1,4 +1,4 @@
-import controller as control
+import TestControl as tc
 
 
-control.start()
+tc.start()
