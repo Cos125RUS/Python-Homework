@@ -1,0 +1,71 @@
+Задача: Создать информационную систему позволяющую работать с сотрудниками некой компании.
+
+Описание структуры ПО.
+
+_____________________________________
+
+Модуль: convertData.py
+
+Импортирует: ничего.
+
+Содержит методы:
+1. exportToJSON(). Ничего не возвращает.
+2. exportToTXT(). Ничего не возвращает.
+3. exportToCSV(). Ничего не возвращает.
+4. importCSV(). return dict(ключ id, значение list(surname, name, patonomic, position, salary))
+
+
+
+
+Модуль: workingWithData.py
+
+Импортирует: ничего.
+
+Содержит:
+1. Основные методы:
+1.1. Поиск сотрудника по введённой строке
+findPersonal(dict(база данных), str(поисковой запрос строкой)). 
+return dict(ключ id, значение list(surname, name, patonomic, position, salary)).
+1.2. Выборка сотрудников по должности
+sortOfPosition(dict(база данных), str(должность)).
+return dict(ключ id, значение list(surname, name, patonomic, position, salary)).
+1.3. Выборка сотрудников по зарплате
+sortOfSalary(dict(база данных), int(min поисковое значение), int(max поисковое значение))
+return dict(ключ id, значение list(surname, name, patonomic, position, salary))
+1.4.Добавление сотрудника в словарь
+newPersonal(dict(база данных), tuple(кортеж введённых пользователем значений))
+return dict(обновлённая БД)
+1.5(1). Удаление сотрудника по записи
+deletionOnPerson(dict(база данных), dict(ключ id, значение list(surname, name, patonomic, position, salary)))
+return dict(обновлённая БД)
+1.5(2). Удаление сотрудника по ID
+deletionOnID(dict(база данных), int(id сотрудника))
+return dict(обновлённая БД)
+1.6. Обновление данных сотрудника
+reloading(dict(база данных), tuple(кортеж введённых обновлённых данных по сотруднику), int(id сотрудника))
+return dict(обновлённая БД)
+
+
+2. Вспомогательные методы:
+2.1. Извлечение записи из БД
+takeProfile(dict(база данных), int(id сотрудника))
+return dict(ключ id, значение list(surname, name, patonomic, position, salary))
+
+
+3. Проверочные функции:
+3.1. Проверка поискового значения (профессия)
+checkValidPosition(str(должность)) 
+Метод должен подгружать Базу Данных по профессиям
+return bool(совпадение со списком)
+3.2. Проверка поискового значения (зарплата)
+checkValue(int(min поисковое значение), int(max поисковое значение))
+return bool(удовлетворение условиям)
+3.3. Проверка на символьный ввод
+alphaCheck(str(вводимый текст))
+return bool(поиск букв)
+3.4. Проверка введённых данных о сотруднике
+checkCorrectInput(dict(база данных), tuple(кортеж введённых пользователем значений))
+return bool(пошаговая проверка)
+3.5 Проверка на точное совпадение
+checkPersonal(dict(база данных), int(индекс списка элементов), str(поисковой запрос строкой)). 
+return dict(ключ id, значение list(surname, name, patonomic, position, salary)).

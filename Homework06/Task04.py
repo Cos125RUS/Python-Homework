@@ -2,4 +2,4 @@
 #     *Пример:*
 #     - Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
 
-print(dict(enumerate({3*i+1 for i in range(1, int(input('n = ')) + 1)}, 1)))
+print(dict(enumerate((3*i+1 for i in range(1, int(input('n = ')) + 1)), 1)))
