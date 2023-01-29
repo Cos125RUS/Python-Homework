@@ -7,13 +7,11 @@ async def hello_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     log(update, context)
     user_id = update.effective_user.id
     if user_id == 582499322:
-        print(123)
-        await update.message.reply_text(f'Привет, моя любимка =)')
+        print(1)
+        await update.message.reply_text(f'Привет, моя стервозинка =)')
     elif user_id == '582499322':
-        print(123)
-        await update.message.reply_text(f'Привет, моя любимка =)')
-    # elif user_id == :
-        # await update.message.reply_text(f'Привет, мамуль =)')
+        print(2)
+        await update.message.reply_text(f'Привет, моя стервозинка =)')
     else:
         await update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
