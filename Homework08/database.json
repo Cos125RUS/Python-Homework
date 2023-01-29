@@ -1,43 +1,43 @@
 [
     {
         "id": 1,
-        "surname": Алеексеев,
+        "surname": Алексеев,
         "name": Иван,
-        "patronymic": Иванович,
+        "patronymic": Викторович,
         "position": электрик,
-        "salary": 50000
+        "salary": 37000
     },
     {
         "id": 2,
-        "surname": Путин,
-        "name": Владимир,
-        "patronymic": Владимирович,
-        "position": президент,
-        "salary": 500000
+        "surname": Зайцев,
+        "name": Игорь,
+        "patronymic": Дмитриевич,
+        "position": столяр,
+        "salary": 36000
     },
     {
         "id": 3,
-        "surname": Макаров,
-        "name": Макар,
-        "patronymic": Андреевич,
-        "position": лейтинант,
-        "salary": 20000
+        "surname": Петров,
+        "name": Сергей,
+        "patronymic": Петрович,
+        "position": рабочий,
+        "salary": 23000
     },
     {
         "id": 4,
-        "surname": Петров,
-        "name": Петр,
-        "patronymic": Петрович,
-        "position": аналитик,
-        "salary": 60000
+        "surname": Зиновьев,
+        "name": Савелий,
+        "patronymic": Прокофьевич,
+        "position": рабочий,
+        "salary": 25000
     },
     {
         "id": 5,
-        "surname": Сидоров,
-        "name": Сидор,
-        "patronymic": Сидорович,
-        "position": маляр,
-        "salary": 12000
+        "surname": Иванов,
+        "name": Никита,
+        "patronymic": Семёныч,
+        "position": рабочий,
+        "salary": 22000
     },
     {
         "id": 6,
@@ -49,10 +49,50 @@
     },
     {
         "id": 7,
+        "surname": Семёнов,
+        "name": Игорь,
+        "patronymic": Леонидович,
+        "position": прораб,
+        "salary": 39000
+    },
+    {
+        "id": 8,
+        "surname": Занудная,
+        "name": Марья,
+        "patronymic": Ивановна,
+        "position": бухгалтер,
+        "salary": 45000
+    },
+    {
+        "id": 9,
+        "surname": Байден,
+        "name": Джозеф,
+        "patronymic": Джозефавич,
+        "position": президент,
+        "salary": 900000
+    },
+    {
+        "id": 10,
+        "surname": Буш,
+        "name": Джордж,
+        "patronymic": Джорджевич,
+        "position": экс-президент,
+        "salary": 100
+    },
+    {
+        "id": 11,
         "surname": Сталин,
         "name": Иосиф,
         "patronymic": Виссарионович,
         "position": генсек,
-        "salary": 10000
+        "salary": 100
+    },
+    {
+        "id": 13,
+        "surname": Кузнецов,
+        "name": Илья,
+        "patronymic": Николаевич,
+        "position": сторож,
+        "salary": 17000
     }
 ]
