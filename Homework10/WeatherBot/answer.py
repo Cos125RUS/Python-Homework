@@ -8,7 +8,8 @@
 # 
 def create_answer(data):
     main, temp, windSpeed, pressure = data
-    main = main_translation(main)
+    translate = {'Clouds': 'Облачно', 'Clear': 'Ясно', 'Rain': 'Дождь', 'Snow': 'Снег'}
+    main = translate[main]
     answer = f'{main}\nТемпература: {temp}\nСкорость ветра: {windSpeed}\nДавление: {pressure}\n\n'
     comment = temperature_comment(temp) + "\n"
     if temp > 0:
@@ -17,20 +18,7 @@ def create_answer(data):
     answer += comment
     # Формируем итоговую строку
     return answer
-
 #-----------------------------------------------------
-
-#-----------------------------------------------------
-# Метод возвращает рекмондации по погоде основываясь на температуре.
-#
-# def temperature_comment(string temperature):
-#    return (string comment)
-#
-def main_translation(main):
-    translate = {'Clouds': 'Облачно', 'Clear': 'Ясно', 'Rain': 'Дождь', 'Snow': 'Снег'}
-    return translate[main]
-
-
 
 #-----------------------------------------------------
 # Метод возвращает рекмондации по погоде основываясь на температуре.
